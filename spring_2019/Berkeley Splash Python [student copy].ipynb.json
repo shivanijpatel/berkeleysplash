@@ -1,0 +1,1473 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "# Berkeley Splash: Learing about Python, the Computing Language not the Snake\n",
+    "## 03/16/2019\n",
+    "### Table of Contents:\n",
+    "1. [Basic Python Syntax](#section1)  \n",
+    "    1.1 [Jupyter Notebooks](#section1.1)  \n",
+    "    1.2 [Text](#section1.2)  \n",
+    "    1.3 [Code](#section1.3)  \n",
+    "    1.4 [Writing in Jupyter Notebooks](#section1.4)  \n",
+    "    1.5 [Errors](#section1.5)  \n",
+    "2. [Numbers](#section2)  \n",
+    "    2.1 [Basic Arithmetic Operations](#section2.1)  \n",
+    "3. [Variables and Functions](#section3)  \n",
+    "    3.1 [Commenting](#section3.1)  \n",
+    "    3.2 [Assignment Statments](#section3.2)  \n",
+    "    3.3 [Functions](#section3.3)  \n",
+    "    3.4 [Data Types](#section3.4)  \n",
+    "    3.5 [Importing Code](#section3.5)  \n",
+    "4. [Arrays](#section4)  \n",
+    "5. [Challenge Questions](#section5)  \n",
+    "    5.1 [Arithmetic](#section5.1)   \n",
+    "    5.2 [Printing and Strings](#section5.2)   \n",
+    "    5.3 [Arrays and Arithmetic](#section5.3)   \n",
+    "    \n",
+    "\n",
+    "\n",
+    "## Contacts:\n",
+    "**Co-Teachers:**\n",
+    "[Shivani Patel](mailto:shivanijpatel@berkeley.edu) & [Sindhu Goli](mailto:sindhugoli@berkeley.edu)\n",
+    "\n",
+    "**Assistants:**\n",
+    "[Sage Jeon](mailto:sungjoojeon@berkeley.edu) & [Hailey Tran](mailto:hailey.tran@berkeley.edu)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section1'></a>\n",
+    "# Part 1: Basic Python Syntax"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This course will teach you to:\n",
+    "1. navigate Jupyter Notebooks (like this one)\n",
+    "2. write and evaluate some basic *expressions* in Python\n",
+    "3. call *functions* to use prewritten code other people have written;\n",
+    "4. break down Python code into smaller parts to understand it."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section1.1'></a>\n",
+    "### 1.1 Jupyter Notebooks"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    " - Some shortcuts:\n",
+    "     - `Esc` - `a`: creates a cell above current cell\n",
+    "     - `Esc` - `b`: creates a cell below current cell\n",
+    "     - Alternatives to `shift` - `enter`:\n",
+    "         - `ctrl` - `enter`: run cell, keeps cursor in cell\n",
+    "         - `opt` - `enter`: run cell, create new cell below"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Each rectangle containing text is a *cell*.\n",
+    "\n",
+    "There are two types of cells: Text and Code"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section1.2'></a>\n",
+    "### 1.2 Text\n",
+    "    - simple cells with text (like this one)\n",
+    "    - can be edited by double-clicking on the cell."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Practice:**\n",
+    "\n",
+    "    Complete the following sentence structure:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Hi, my name is"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section1.3'></a>\n",
+    "### 1.3 Code\n",
+    "   - The language that we are using in this notebook is Python 3\n",
+    "   - \"running a cell\" will execute all of the code it the cell contains\n",
+    "   - cells can be edited by double-clicking the cell, it'll be highlighted with a little green or blue rectangle\n",
+    "   - to run the code in a cell press the ▶| button or press `shift` + `enter`\n",
+    "\n",
+    "Try running this cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"Berkeley Splash is the best!!!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "And this one:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"\\N{WAVING HAND SIGN}, \\N{EARTH GLOBE ASIA-AUSTRALIA}!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Code is broken down into different lines called expressions. Cells can contain multiple lines with multiple expressions. When you run a cell, the lines of code are executed in the order in which they appear. \n",
+    "\n",
+    "Every `print` expression prints a line. Run the next line and notice the order of the output"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print('This line is first,')\n",
+    "print('and this one is last.')"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 1.3.1.** Change the cell above so that it prints out:\n",
+    "    \n",
+    "    This line is first,\n",
+    "    then the whole 🌏,\n",
+    "    and this one is last.\n",
+    "\n",
+    "Hint: if you are stuck on the Earth symbol, try asking your neighbor :)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section1.4'></a>\n",
+    "### 1.4. Writing in Jupyter Notebooks\n",
+    "Although we have created this notebook for you to learn, you will most likely need to know how to create your own in the future. Lets start with adding new cells for text and code\n",
+    "\n",
+    "To add a cell, click the + button in the menu bar. If the left sidebar has `In [ ]` then it is a code cell, if it is blank it is a text cell. To change the type of cell you can do either of these options:\n",
+    "1. select the cell then click cell from the toolbar and choose Cell Type. (Don't worry about \"Raw NBConvert\").\n",
+    "2. click the left side of the cell and press `m` for markdown cell or `y` for a code cell.\n",
+    "\n",
+    "**Question 1.4.1*** Add a code cell below this one.  Write code in it that prints out:\n",
+    "   \n",
+    "    Music makes the world round! ♪🌏♪\n",
+    "\n",
+    "Hint: That musical note symbol is like the Earth symbol.  Its long-form name (code) is `\\N{EIGHTH NOTE}`.\n",
+    "\n",
+    "Run your cell to verify that it works."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "### 1.5. Errors\n",
+    "Python is just like any other language you learn, there are grammer rules and these are really important. The computer is designed to excute code based on what it was programmed to understand.\n",
+    "1. The rules are *simple*\n",
+    "2. The most common error is a Syntax Error\n",
+    "\n",
+    "Today we are going to teach you a simple error to fix: `SyntaxError`. It tells you that you have created an illegal structure, or in other words, you broke the \"grammar rules\"\n",
+    "\n",
+    "We have made an error in the next cell. Run it and see what happens."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "print(\"This line is missing something.\""
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Lets break this down, the last line of the error output attempts to tell you in english what went wrong. \"`EOF`\" means \"end of file\". Also notice how there is a small carrot that points to a part of the ran cell. This attempts to tell you \"where\" you made the error.\n",
+    "\n",
+    "There is a lot of unnessary cryptic terminology in programming languages but you don't need to understand it all, try to just look at the last line of the error, that is the most simple version of the problem.\n",
+    "\n",
+    "**Question 1.5.1.** Try to fix the code above so that you can run the cell and see the intended message instead of an error"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section2'></a>\n",
+    "# Part 2: Numbers\n",
+    "In addition to representing commands to print out lines of code, or *expressions* Python also knows how to intrepret and evaluate numbers. The expression `15.0210000` evaluates to the number 15.021. Run the cell below and see:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "15.0210000"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Notice how we didn't use the function `print`. This is because the last line has a value it will print that value for you. BUT, it will disregard any prior lines."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "1\n",
+    "2\n",
+    "3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 2.0.1.** If you want the output to include 1, use the function `print`. Change the cell below to produce an output with 1 and 3"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "1\n",
+    "2\n",
+    "3"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section2.1'></a>\n",
+    "### 2.1 Basic Arithmetic Operations\n",
+    "Lets learn a few basic (and extremely useful) operations "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Addition: `+`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Subtraction: `-`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Multiplication: `*`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Division: `/`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Floor Division: `//`\n",
+    "This divides the number and rounds down"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Remainder: `%`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exponetiation: `**`"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Note: `2 * * 5` will return an error. See below:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "2 * * 5"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Python has rules like order of operations (PEMDAS), run the following cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "3+6*5-6*3**2*2**3/4*7"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Now run this cell, notice the use of parenthesis. Happy New Year!!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "3+(6*5-(6*3))**2*((2**3)/4*7)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This is what Python reads for the first expression:\n",
+    "\n",
+    "$$3+6 \\times 5-6 \\times 3^2 \\times \\frac{2^3} {4} \\times 7$$\n",
+    "\n",
+    "The second expression is evaluated as:\n",
+    "\n",
+    "$$3 + (6 \\times 5 - (6 \\times3))^2 \\times (\\frac{(2^3)}{4} \\times 7)$$"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 2.1.1** Write a python expression below that is equal to:\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3'></a>\n",
+    "# Part 3: Varibles and Fuctions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3.1'></a>\n",
+    "### 3.1 Commenting\n",
+    "A *comment* is a line of code that the computer does not run. Why do we need this? When code has hundreds or even thousands of lines, it is sometimes hard to know what exactly the computer is computing in certain places. Adding comments allow the coder (you) to write in english what the line means/evaluates to.\n",
+    "\n",
+    "To add a comment, we use a `#` symbol, everything to the right of the # is apart of the comment."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Calculating an approximation for pi\n",
+    "about_pi = 22/7\n",
+    "about_pi"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<img src=\"http://imgs.xkcd.com/comics/future_self.png\">\n",
+    "Source: http://imgs.xkcd.com/comics/future_self.png"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3.2'></a>\n",
+    "### 3.2 Assignment Statements\n",
+    "When we speak we don't say, \"WOW look at that mammal with black and white stripes!\" Instead, we say, \"Zebra!\"\n",
+    "\n",
+    "Python can also do the same sort of classfication. We can assign a variable to an expression. This helps when we have really complicated code. We call this an *assignment statement* Python will evaluate the expression on the right side of the `=` and will store it to the variable on the left of the `=`. Once you run the line of code, everytime you call that varible later on, Python will insert the evaluated expression.\n",
+    "\n",
+    "As we have seen, programing does not only include just numbers. Text is one of the most common types of values used in programs.\n",
+    "\n",
+    "`string` is a programming term for a sequence of characters. This can include a single character, a word, a sentence, or a whole book. The contents can be anything; words, numbers, symbols.\n",
+    "\n",
+    "In order to create a string of characters, we put double quotes`(\")` or single quotes`(')` (both produce the same function) but, the opening and ending quotes must match.\n",
+    "\n",
+    "We have seen strings before in `print` statements\n",
+    "\n",
+    "Note: \n",
+    "1. Variables are case senstive\n",
+    "2. They cannot start with a number like `6` but, `six` will work.\n",
+    "3. There cannot be any spaces, instead we use `_` (underscore) to seperate words."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thesis = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Notice how no output was produced? This is because Python stored the expression in the variable `thesis`. Run the following cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "thesis"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "If no value has been assigned to a name, Python will return a NameError:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "topic_sentence"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 3.2.1** Assign a value to the `topic_sentence` below:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "topic_sentence"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "A common pattern that in JN is to use assignment statements and then immediately evaluate the name in the last line of the cell."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "close_to_pi = 355/113\n",
+    "close_to_pi"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Another common use of variables in JN is a series of lines in a single cell. This is a more complex computation in stages naming the end result rather than individual values"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "rent = \n",
+    "months = \n",
+    "total_rent_paid = rent* months\n",
+    "total_rent_paid"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 3.2.2** Assign the name `seconds_in_a_year` to the number of seconds in a year. Compute 365 days for the year.\n",
+    "\n",
+    "If you're stuck read the comments for hints :)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Change the next line so it computes the number of seconds in a year\n",
+    "# Try not to use a computer and instead use the Arithmetic functions to solve this\n",
+    "\n",
+    "seconds_in_a_year = \n",
+    "\n",
+    "#We've put this line in the cell so that it will print your corresponding value\n",
+    "#Do not change this part!\n",
+    "#Hint: your output should start with 3 and end with three 0's\n",
+    "seconds_in_a_year"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3.4'></a>\n",
+    "### 3.4 Functions\n",
+    "*Functions* are pieces of code written by others that you can freely use. A functions is called through its name and then its argument or arguments the syntax of a function looks like this:\n",
+    "`function(argument)`. *Functions are case sensitive*. \n",
+    "\n",
+    "For example: `f(27)`\n",
+    "\n",
+    "This is called a *call expression* because `f` is the name of the function being called and `27` is the argument being passed in.\n",
+    "\n",
+    "Python has a set of built-in functions that are very simple to use. Lets look at a few!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "abs()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 3.4.1.** Pick a random number and assign it to the value n. Then, execute the cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "n = \n",
+    "abs(n)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Some functions take in multiple arguments, seperated by commas. Lets look at a few:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "max()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "max()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "min()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "sum()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "You can also pass in expressions into the functions. Below is an example of the function `round()`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Run this cell and see the result\n",
+    "num_rotations = 4\n",
+    "radians_turned = 2 * about_pi * num_rotations\n",
+    "radians_turned"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Run this cell and see the evidence of rounding\n",
+    "# round() rounds the output to the nearest integer\n",
+    "approx_radians_turned = round(2 * about_pi * num_rotations)\n",
+    "approx_radians_turned"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "*Nesting* is the term for what was displayed above. Here is a more simple example:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "abs(4 - max(2,3,4,5,6,9))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3.5'></a>\n",
+    "### 3.5 Data Types\n",
+    "Python has several types of data.\n",
+    "1. Numbers look like this `[1.22, 4, 0.45, 2.0]\n",
+    "2.`string` are a \"string\" of characters refer to the string section for more details\n",
+    "3. `bool` this is a fancy way of saying `True/False` or `1/0`\n",
+    "\n",
+    "You can also convert different data types.\n",
+    "1. `int` is a solid number such as, 6, 2, 5500 etc.\n",
+    "2. `float` is a number with decimal places such as, 1.34, 88.3, 3.0\n",
+    "\n",
+    "Lets look at some examples:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section3.6'></a>\n",
+    "### 3.6 Importing Code\n",
+    "\n",
+    "A really nice feature that Python has is built-in functions. These are functions that were already defined by other people can be imported and used without having to define functions.\n",
+    "\n",
+    "Let's look at the `import math` function:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import math\n",
+    "\n",
+    "#math is super useful when trying to use functions like pi or square root\n",
+    "print(math.pi)\n",
+    "print(math.sqrt(16))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Once you import the code once in the notebook, python does not need a reminder everytime you use the function\n",
+    "Here are some functions you can use in the `math` notebook:\n",
+    "\n",
+    "|Method Name|Value|\n",
+    "|-|-|\n",
+    "|`cos(x)`|returns the cosine of x radians|\n",
+    "|`sin(x)`|returns the sine of x radians|\n",
+    "|`tan(x)`|returns the tangent of x radians|\n",
+    "|`e`|returns the value of *e*|\n",
+    "|`pi`|returns the value of pi (3.14)|\n",
+    "|`factorial`| calculates factorials|\n",
+    "|`log(logarithm, base)`|calculates logarithms. The first number is the logarithm and the second number is the base.|\n",
+    "|`sqrt`| calculates square roots|"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 3.6.1** \n",
+    "Let's create some code:\n",
+    "\n",
+    "Write this code in the next line! \n",
+    "\n",
+    "**Hint**: just simply stating the function does not tell python where to get it from. Remember to write `math.` before each function\n",
+    "$$cos(\\pi)$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Try this one:\n",
+    "$$\\sqrt(16)$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "$$\\log(8,2)$$"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "find the factorial of 5"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section4'></a>\n",
+    "# Part 4: Arrays\n",
+    "Although we could code every little detail in our computer, we can also tell Python to do some work for us. An array puts many values into one place so we can tell functions to operate them as a group. Lets take a look at a couple ways we can do this!"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section4.1'></a>\n",
+    "### 4.1 Make_array\n",
+    "The `make_array` functions allows us to create a list of values which will then output an array. \n",
+    "\n",
+    "We can make an array of 'string' values:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Run this cell\n",
+    "from datascience import *\n",
+    "rainbow_colors= make_array('red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'purple')\n",
+    "rainbow_colors"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We can also make an array of numbers:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "small_numbers = \n",
+    "small_numbers"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 4.1.1.** Make an array containing the numbers 6,7,8,9,10, in that order. Name it `large_numbers`:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 4.1.2.** Add both `small_numbers` and `large_numbers` together.\n",
+    "\n",
+    "Hint: You should be using the names above and an arithmetic operation to complete this question. Do not manually compute this, let the computer do the hard work."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Try running this cell:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "small_numbers + make_array(3,2,1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "We recieve a ValueError, why do you think? Talk with a partner next to you, then we will go over this in class."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Write your notes here:\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section4.2'></a>\n",
+    "### 4.2 Single Elements of Arrays ('indexing')\n",
+    "A lot of times in Python we import tables that have hundreds of array values. Lets look at an example below:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#run this cell to load the data\n",
+    "import numpy as np\n",
+    "random_array = np.arange(0, 20000, 2)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "This creates an array of 10,000 values. Lets assume we want to find the 100th value. To do this, we use a term called indexing, the function that correspondes to this is `.item()`. But, there are some key features you should know first:\n",
+    "\n",
+    "1. `.item()` is written after the array\n",
+    "2. indexing also starts with `0` not `1`. This means that if we do `item(1)` it will give us the second element of the array, `item(0)` will give the first element of the array."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 4.2.1** Find the 100th element in `random_array`:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 4.2.1** How about the 289th element?"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Since `make_array` returns an array, we can also index a number in the same line of code."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "make_array()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "WRITE RESTAURANT BILLS WITH TAXES CODE"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section5'></a>\n",
+    "# Part 5: Challenge Questions"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section5.1'></a>\n",
+    "### 5.1 Arithmetic\n",
+    "**Question 5.1.1** In the next cell assign the name `new_year` to the larger number amoung the following two numbers:\n",
+    "1. the absolute value of $2^{5}-2^{11}-2^1$ AND\n",
+    "2. $5 \\times 13 \\times 31 +2$\n",
+    "\n",
+    "Challenge yourself and use one statement (one line of code):"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "new_year = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section5.2'></a>\n",
+    "### 5.2 Printing and Strings\n",
+    "**Question 5.2.** Yuri Gagarin was the first person to travel through outer space. When he emerged from his capsule upon landing on Earth, he reportedly had the following conversation with a woman and girl who saw the landing:\n",
+    "\n",
+    "    The woman asked: \"Can it be that you have come from outer space?\"\n",
+    "    Gagarin replied: \"As a matter of fact, I have!\"\n",
+    "    \n",
+    "Complete the cell below and assign expressions to the following names, replace the `...`. "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "woman_asking = ...\n",
+    "woman_quote = ...\n",
+    "gagarin_reply = ...\n",
+    "gagarin_quote = ...\n",
+    "\n",
+    "#Do not change these next lines, run the cell after completing the above statements\n",
+    "print(woman_asking, woman_quote)\n",
+    "print(gagarin_reply, gagarin_quote)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "<a id='section5.3'></a>\n",
+    "### 5.3 Arrays and Arithmetic\n",
+    "Here is a (modified) menu for the best fast-food joint ever!"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Run this cell\n",
+    "from datascience import *\n",
+    "food = make_array('Double-Double', 'Cheeseburger', 'Hamburger', 'French Fries', 'Shake (any flavour)', 'Small Drink', 'Medium Drink', 'Large Drink')\n",
+    "prices = make_array('3.45', '2.40', '2.10', '1.60', '2.15', '1.50', '1.65', '1.85')\n",
+    "In_n_out = Table().with_columns('Food', food, 'Prices ($)', prices)\n",
+    "In_n_out"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "    <thead>\n",
+       "        <tr>\n",
+       "            <th>Food</th> <th>Prices ($)</th>\n",
+       "        </tr>\n",
+       "    </thead>\n",
+       "    <tbody>\n",
+       "        <tr>\n",
+       "            <td>Double-Double      </td> <td>3.45      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Cheeseburger       </td> <td>2.40      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Hamburger          </td> <td>2.10      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>French Fries       </td> <td>1.60      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Shake (any flavour)</td> <td>2.15      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Small Drink        </td> <td>1.50      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Medium Drink       </td> <td>1.65      </td>\n",
+       "        </tr>\n",
+       "        <tr>\n",
+       "            <td>Large Drink        </td> <td>1.85      </td>\n",
+       "        </tr>\n",
+       "    </tbody>\n",
+       "</table>"
+      ],
+      "text/plain": [
+       "Food                | Prices ($)\n",
+       "Double-Double       | 3.45\n",
+       "Cheeseburger        | 2.40\n",
+       "Hamburger           | 2.10\n",
+       "French Fries        | 1.60\n",
+       "Shake (any flavour) | 2.15\n",
+       "Small Drink         | 1.50\n",
+       "Medium Drink        | 1.65\n",
+       "Large Drink         | 1.85"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Run this cell\n",
+    "from datascience import *\n",
+    "food = make_array('Double-Double', 'Cheeseburger', 'Hamburger', 'French Fries', 'Shake (any flavour)', 'Small Drink', 'Medium Drink', 'Large Drink')\n",
+    "prices = make_array('3.45', '2.40', '2.10', '1.60', '2.15', '1.50', '1.65', '1.85')\n",
+    "In_n_out = Table().with_columns('Food', food, 'Prices ($)', prices)\n",
+    "In_n_out"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Using this table lets answer some challenge questions:"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 5.3.1** Use the `.item` and the array `prices` to calculate Jenny's order:\n",
+    "    - Cheeseburger\n",
+    "    - French Fries\n",
+    "    - Chocolate Shake\n",
+    "Use `jenny_bill` as the name of the calculation."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "jenny_bill = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 5.3.2**\n",
+    "The combined sales tax rate for Berkeley, CA is [9.25%]('https://www.avalara.com/taxrates/en/state-rates/california/cities/berkeley/'). Calculate Jenny's total restaurant bill with tax below:"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "jenny_total = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 5.3.3** Now compute the following orders with the given names:\n",
+    "\n",
+    "|Name|Order|\n",
+    "|-|-|\n",
+    "|Mark|Cheeseburger and Medium Drink|\n",
+    "|Ajay|French Fries and Small Drink|\n",
+    "|Kevin|Hamburger, French Fries, Large Drink|\n",
+    "|Ani|Double-Double and Small Drink|"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Cheeseburger and a Medium Drink\n",
+    "mark_bill = \n",
+    "\n",
+    "#French Fries and Small Drink\n",
+    "ajay_bill = \n",
+    "\n",
+    "#Hamburger, French Fries, Large Drink\n",
+    "kevin_bill = \n",
+    "\n",
+    "#Double-Double and Small Drink\n",
+    "ani_bill = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "**Question 5.3.4** Now create an array of restaurant bills with Jenny, Mark, Ajay, Kevin, and Ani's bills calculated above.\n",
+    "\n",
+    "Hint: Use the `make_array()` function"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "all_restaurant_bills = "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Now, we could individually multiply each bill by the tax to find the total bill BUT why do that if we can tell the computer to do most of the work!\n",
+    "\n",
+    "We can do this by assigning the decimal of tax to `tax`. Then multiplying `all_restaurant_bills` to `tax`. This will produce a new array of total bills.\n",
+    "\n",
+    "Hint: remember that if we want to find the total bill we CANNOT set `tax` equal to 0.0925, add 1 to this."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "tax = \n",
+    "all_total_restaurant_bills = \n",
+    "all_total_restaurant_bills"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Just run this cell to see the values in a table\n",
+    "# We did not go over tables but once you take a more advanced class you will learn about it :)\n",
+    "Table.with_column('Name', make_array('Jenny', 'Mark', 'Ajay', 'Kevin', 'Ani'), \n",
+    "                  'Order', make_array('Cheeseburger, French Fries, Chocolate Shake', 'Cheeseburger and Medium Drink', \n",
+    "                                     'French Fries and Small Drink', 'Hamburger, French Fries, and Large Drink',\n",
+    "                                     'Double-Double and Small Drink'),\n",
+    "                  'Restaurant Bills w/o Tax ($)', all_restaurant_bills,\n",
+    "                  'Final Bill ($)', all_total_restaurant_bills)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.6.7"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
