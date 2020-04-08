@@ -1,6 +1,6 @@
 # berkeleysplash
 
-Hi Thank you for coming to this page. My name is Shivani Patel, I have created these notebooks as a means to teach high schoolers programming. These Jupyter Notebooks are created to teach introductory level Python programming.
+Hi Thank you for coming to this page. My name is Shivani Patel, I have created these notebooks as a means to teach high school students programming. These Jupyter Notebooks are created to teach introductory level Python programming.
 
 Most up to date topics include:
   1. Basic Python Syntax
@@ -14,7 +14,7 @@ Most up to date topics include:
 
 
 If you are an employer:
-I created these notebooks from scratch with the intention of creating a safe space of learning introductory progrmaming. Every semester a team of students and I take 30-60 high school students to the computer lab and teach the notebook.
+I created these notebooks from scratch with the intention of creating a safe space of learning introductory programming. Every semester a team of students and I take 30-60 high school students to the computer lab and teach the notebook.
 
 If you are a student:
 Please use this link to create your own version (Spring 2020) on your computer:
